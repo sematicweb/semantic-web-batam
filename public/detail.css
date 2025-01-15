@@ -1,0 +1,187 @@
+/* General Styling */
+/* Mengatur gaya umum untuk body, termasuk font, warna latar belakang, dan tata letak dasar */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Latar belakang lebih terang */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* Header Section */
+  /* Mengatur gaya untuk bagian header, khususnya area banner */
+  header .banner {
+    background-image: url('img/banner.png');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 100%;
+  }
+
+  #google-map-container {
+    display: flex;
+    justify-content: center; /* Mengatur peta berada di tengah secara horizontal */
+    align-items: center; /* Jika ingin menyesuaikan peta dengan vertikal */
+    height: 50%; /* Menjamin tinggi peta penuh pada ruang yang tersedia */
+  }
+  
+  #google-map {
+    width: 30vw; /* Menggunakan 80% lebar layar (viewport width) */
+    height: 40vh; /* Menggunakan 60% tinggi layar (viewport height) */
+    border: 0;
+  }
+
+  /* Styling untuk header di bawah banner */
+.header-bawah {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .header-bawah h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Gambar bisnis */
+.business-image {
+    width: 680px; /* Ukuran gambar sedikit lebih besar untuk lebih jelas */
+    height: 600px;
+    object-fit: cover;
+    border-radius: 12px; /* Sudut gambar lebih bulat */
+    margin-bottom: 15px;
+    border: 3px solid #ddd; /* Border untuk gambar lebih elegan */
+    transition: transform 0.3s ease; /* Transisi halus saat hover */
+}
+
+.business-image:hover {
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+ /* Mengatur gaya untuk detail bisnis */
+.details-container {
+    width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px; /* Sudut lebih membulat */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.2s ease; /* Efek transisi */
+}
+
+.details-container:hover {
+    transform: translateY(-5px); /* Efek angkat saat hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Bayangan lebih besar saat hover */
+}
+
+.details-container h2 {
+    font-size: 2.2rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Detail Info */
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 1.2rem;
+    color: #555;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.detail-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.detail-info h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+  
+
+/* Tombol Back yang lebih estetis */
+.back-button {
+    padding: 10px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  
+  /* Efek Hover pada tombol Back */
+  .back-button:hover {
+    background-color: #218838;
+    transform: translateY(-3px); /* Efek angkat saat hover */
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.4); /* Tambahkan bayangan lebih besar */
+  }
+  
+  /* Efek aktif pada tombol Back */
+  .back-button:active {
+    transform: translateY(0); /* Menghilangkan efek angkat saat tombol ditekan */
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3); /* Kembali ke bayangan normal */
+  }
+  
+  /* Mengatur gaya untuk elemen footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    width: 100%;
+  }
+  
+  footer {
+    margin-top: auto;
+  }
+  
+  /* Responsive Design */
+  /* Menyesuaikan tampilan untuk perangkat dengan lebar layar lebih kecil */
+  @media (max-width: 768px) {
+    header .banner {
+      height: 200px;
+    }
+    #searchBox, .select-wrapper {
+      width: 100%;
+    }
+    .form-section {
+      flex-direction: column;
+    }
+  
+    .businesses-container {
+      width: 100%; /* Menghindari pemampatan */
+    }
+  }
+  

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="../admin/css/style_dashboard.css">
+    <!-- SweetAlert2 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h2>Admin Dashboard</h2>
+        </div>
+        <nav>
+            <button id="logoutBtn">Logout</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h1>Selamat Datang di Dashboard Admin</h1>
+            <p>Kelola Bisnis dan Kategori Anda di sini!</p>
+        </section>
+
+        <!-- Add Business & Category Form -->
+        <section class="form-section">
+            <!-- Add New Business Form -->
+            <div class="form-container">
+                <h3>Tambah Bisnis Baru</h3>
+                <form id="addBusinessForm" enctype="multipart/form-data">
+                    <input type="text" id="businessName" placeholder="Nama Bisnis" required>
+                    <select id="categorySelect" required>
+                        <!-- Kategori akan diisi melalui JavaScript -->
+                    </select>
+                    <input type="text" id="address" placeholder="Alamat" required>
+                    <input type="text" id="phone" placeholder="No HP" required>
+                    <input type="text" id="website" placeholder="Website (optional)">
+                    <input type="file" id="businessPhoto" accept="image/*" required>
+                    <button type="submit">Tambah Bisnis</button>
+                </form>
+            </div>
+        
+            <!-- Add New Category Form -->
+            <div class="form-container">
+                <h3>Tambah Kategori Baru</h3>
+                <form id="addCategoryForm">
+                    <input type="text" id="categoryName" placeholder="Nama Kategori" required>
+                    <button type="submit">Tambah Kategori</button>
+                </form>
+            </div>
+        
+            <!-- Edit Business Form -->
+            <div class="form-container" id="editBusinessSection" style="display: none;">
+                <h3>Edit Bisnis</h3>
+                <form id="editBusinessForm" enctype="multipart/form-data">
+                    <input type="text" id="editBusinessName" placeholder="Nama Bisnis" required>
+                    <select select id="editCategorySelect" name="editCategorySelect" required>
+                    <option value="">Pilih Kategori</option>
+                    <!-- Kategori akan diisi oleh JavaScript -->
+                    </select>
+                    <input type="text" id="editAddress" placeholder="Alamat" required>
+                    <input type="text" id="editPhone" placeholder="No HP" required>
+                    <input type="text" id="editWebsite" placeholder="Website (optional)">
+                    <input type="file" id="editBusinessPhoto" accept="image/*">
+                    <button type="submit">Update Bisnis</button>
+                    <button type="button" id="cancelEditButton" onclick="hideEditBusinessForm()">Batal</button>
+                </form>
+            </div>
+
+            <div class="form-container" id="updateCategorySection" style="display: none;">
+                <h3>Update Kategori</h3>
+                <form id="updateCategoryForm">
+                    <input type="text" id="updateCategoryName" placeholder="Nama Kategori" required>
+                    <button type="submit">Update Kategori</button>
+                    <button type="button" onclick="hideUpdateCategoryForm()">Batal</button>
+                </form>
+            </div>
+        </section>
+        
+        
+
+
+        <!-- Overview Section -->
+        <section class="overview">
+            <div class="overview-item">
+                <h3>Jumlah Bisnis</h3>
+                <p id="businessCount">0</p>
+            </div>
+            <div class="overview-item">
+                <h3>Jumlah Kategori</h3>
+                <p id="categoryCount">0</p>
+            </div>
+        </section>
+
+        <!-- Business & Category Table -->
+        <section class="table-section">
+            <h3>Daftar Bisnis</h3>
+            <table id="businessTable">
+                <thead>
+                    <tr>
+                        <th>Nama Usaha</th>
+                        <th>Jenis Usaha</th>
+                        <th>Alamat</th>
+                        <th>No HP</th>
+                        <th>Website</th>
+                        <th>Kategori</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="businessData">
+                    <!-- Data bisnis akan dimuat di sini -->
+                </tbody>
+            </table>
+        </section>
+        
+
+            <!-- Pagination Controls -->
+            <div id="pagination">
+                <!-- Tombol pagination akan muncul di sini -->
+            </div>
+
+            <section class="categori-section">
+                <h3>Daftar Kategori</h3>
+                <table id="categoryTable">
+                    <thead>
+                        <tr>
+                            <th>Nama Kategori</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="categoryData">
+                        <!-- Data kategori akan dimuat di sini -->
+                    </tbody>
+                </table>
+            </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Semantic Web Warna-Warni di Batam</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../admin/js/dashboard.js"></script>
+</body>
+
+</html>

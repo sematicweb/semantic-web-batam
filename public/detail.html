@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Usaha - Semantic Web Warna-Warni di Batam</title>
+  <link rel="stylesheet" href="detail.css">
+  <script src="js/detail.js" defer></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="banner"></div>
+  </header>
+
+  <header class="header-bawah">
+    <h2>Selamat Datang Di Detail Usaha</h2>
+  </header>
+  
+  <!-- Detail Section -->
+  <section class="details-container">
+    <h2>Detail Usaha</h2>
+    <!-- Tempat untuk gambar usaha (will be updated dynamically by JS) -->
+    <div id="fotoUsaha" class="business-image"></div>
+    <div class="detail-info">
+      <p><strong>Nama Usaha:</strong> <span id="namaUsaha"></span></p>
+      <p><strong>Jenis Usaha:</strong> <span id="jenisUsaha"></span></p>
+      <p><strong>Alamat:</strong> <span id="alamat"></span></p>
+      <p><strong>No Telepon:</strong> <span id="noHp"></span></p>
+      <p><strong>Website:</strong> <span id="website"></span></p>
+      <p><strong>Lokasi di Google Maps:</strong></p>
+      <!-- Menyematkan peta Google Maps kecil di bawah alamat -->
+      <div id="google-map-container">
+        <iframe id="google-map" src="" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+    <button class="back-button" onclick="history.back()">Kembali</button>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Semantic Web Warna-Warni di Batam</p>
+  </footer>
+</body>
+</html>

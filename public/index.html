@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic Web Warna-Warni di Batam</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="banner"></div>
+  </header>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <div class="form-section">
+      <div class="select-wrapper">
+        <select id="jenisUsahaSelect">
+          <option value="">PILIH JENIS USAHA</option>
+        </select>
+        <span class="arrow">&#9660;</span> <!-- Panah dropdown -->
+      </div>
+      <div class="search-wrapper">
+        <input type="text" id="searchBox" placeholder="Cari usaha...">
+        <span class="search-icon">🔍</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Businesses Section -->
+  <section id="businesses" class="businesses-container">
+    <p>Silakan masukkan istilah pencarian.</p>
+    <!-- Businesses dynamically inserted -->
+  </section>
+
+  <!-- Pagination Section -->
+  <section id="pagination" class="pagination-container">
+    <!-- Pagination buttons will be inserted here by JavaScript -->
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Semantic Web Warna-Warni di Batam</p>
+  </footer>
+</body>
+</html>

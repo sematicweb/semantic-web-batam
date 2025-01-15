@@ -1,0 +1,324 @@
+/* General Styling */
+/* Mengatur gaya umum untuk body, termasuk font, warna latar belakang, dan tata letak dasar */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Pastikan body mengisi seluruh layar */
+  overflow-x: hidden; /* Menghindari scrollbar horizontal */
+}
+
+/* Header Section */
+/* Mengatur gaya untuk bagian header, khususnya area banner */
+header .banner {
+  background-image: url('img/banner.png');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+}
+
+/* Search Section */
+/* Mengatur gaya untuk bagian pencarian, termasuk elemen form dan dropdown */
+.search-section {
+  background-color: #333;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+}
+
+.form-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.select-wrapper {
+  position: relative;
+  width: 300px;
+  display: inline-block;
+}
+
+/* Styling for select element */
+/* Mengatur gaya dropdown dan elemen terkait */
+.select-wrapper select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  appearance: none; /* Menyembunyikan arrow default */
+  -webkit-appearance: none; /* Menyembunyikan arrow default di Safari */
+  -moz-appearance: none; /* Menyembunyikan arrow default di Firefox */
+}
+
+/* Dropdown arrow styling */
+/* Menambahkan panah pada dropdown */
+.select-wrapper .arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: white;
+  transition: transform 0.3s ease; /* Efek transisi */
+}
+
+/* Rotate arrow when dropdown is open */
+/* Mengatur rotasi panah ketika dropdown dibuka */
+.select-wrapper select:focus + .arrow,
+.select-wrapper select:active + .arrow {
+  transform: translateY(-50%) rotate(180deg); /* Rotasi 180 derajat ketika dropdown terbuka */
+}
+
+/* Option hover effect */
+/* Mengatur efek hover pada opsi dropdown */
+.select-wrapper select option:hover {
+  background-color: #004494; /* Warna saat hover pada option */
+}
+
+.search-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+#searchBox {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+/* Businesses Section */
+/* Mengatur tata letak dan gaya untuk bagian bisnis */
+.businesses-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid layout */
+  gap: 20px; /* Spasi antar card */
+  text-align: center; /* Memastikan teks di dalam container ini berada di tengah */
+}
+
+/* Card Design */
+/* Mengatur gaya untuk kartu bisnis */
+.business-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribusi vertikal */
+  align-items: center;
+  text-align: center;
+  height: 100%; /* Sama tinggi untuk semua kartu */
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ddd; /* Border ringan */
+  border-radius: 10px; /* Sudut melengkung */
+  background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Gradien latar belakang */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow untuk efek kedalaman */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animasi hover */
+}
+
+.business-card:hover {
+  transform: translateY(-10px); /* Naikkan kartu saat hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow lebih besar saat hover */
+}
+
+.business-image {
+  width: 150px; /* Ukuran gambar lebih besar */
+  height: 150px;
+  object-fit: cover; /* Gambar tidak terdistorsi */
+  border-radius: 8px; /* Sudut gambar melengkung */
+  margin-bottom: 15px; /* Jarak antara gambar dan teks */
+  border: 2px solid #ddd; /* Border untuk gambar */
+}
+
+.business-card h3 {
+  margin: 10px 0;
+  min-height: 60px; /* Sesuaikan dengan panjang teks terpanjang */
+}
+
+.business-card .business-type {
+  font-size: 14px; /* Ukuran font jenis usaha */
+  color: #666; /* Warna teks sekunder */
+  margin: 10px 0 20px;
+}
+
+.business-card button {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0056b3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.business-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsif */
+  gap: 20px; /* Jarak antar card */
+}
+
+/* Styling untuk tombol Lihat Detail */
+/* Styling untuk tombol Lihat Detail */
+.detail-button {
+  display: inline-block;
+  padding: 12px 36px; /* Padding lebih besar untuk kenyamanan */
+  background-color: #28a745; /* Warna hijau segar */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none; /* Hilangkan border */
+  border-radius: 10px; /* Lebih membulat */
+  transition: all 0.2s ease; /* Transisi lebih cepat */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan awal */
+  user-select: none; /* Tidak bisa diseleksi */
+  touch-action: manipulation; /* Responsif untuk perangkat sentuh */
+}
+
+/* Hover */
+.detail-button:hover {
+  background-color: #218838; /* Warna lebih gelap */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam */
+  transform: translateY(-2px); /* Efek melayang */
+}
+
+/* Aktif (Saat ditekan) */
+.detail-button:active {
+  background-color: #1e7e34; /* Warna hijau lebih dalam */
+  transform: scale(0.97); /* Sedikit mengecil saat diklik */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Bayangan lebih kecil */
+}
+
+/* Fokus untuk aksesibilitas */
+.detail-button:focus {
+  outline: 2px dashed #28a745; /* Outline fokus dengan warna hijau */
+  outline-offset: 4px; /* Jarak outline */
+}
+
+
+
+.back-button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.back-button:hover {
+  background-color: #218838;
+}
+
+/* Pagination Section */
+/* Mengatur gaya untuk elemen pagination */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.pagination-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+}
+
+/* Button Styling */
+/* Mengatur gaya umum untuk tombol */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 1rem;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Footer Styling */
+/* Mengatur gaya untuk elemen footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: relative;
+  width: 100%;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* Responsive Design */
+/* Menyesuaikan tampilan untuk perangkat dengan lebar layar lebih kecil */
+@media (max-width: 768px) {
+  header .banner {
+    height: 200px;
+  }
+  #searchBox, .select-wrapper {
+    width: 100%;
+  }
+  .form-section {
+    flex-direction: column;
+  }
+
+  .businesses-container {
+    width: 100%; /* Menghindari pemampatan */
+  }
+}

@@ -1,0 +1,452 @@
+/* Reset dasar untuk menghilangkan margin dan padding default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Menggunakan box-sizing border-box agar padding dan border tidak mempengaruhi ukuran elemen */
+}
+
+/* Gaya untuk keseluruhan halaman */
+body {
+    font-family: Arial, sans-serif; /* Mengatur font halaman */
+    background-color: #f4f7fc; /* Warna latar belakang halaman */
+    color: #333; /* Warna teks utama */
+    line-height: 1.6; /* Mengatur tinggi baris untuk keterbacaan */
+    padding: 20px; /* Memberikan padding di sekitar konten */
+}
+
+/* Header */
+header {
+    display: flex; /* Menggunakan flexbox untuk tata letak header */
+    justify-content: space-between; /* Menyebarkan elemen di header */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    background-color: #333; /* Warna latar belakang header */
+    color: #fff; /* Warna teks putih */
+    padding: 10px 20px; /* Padding di dalam header */
+    border-radius: 8px; /* Memberikan sudut melengkung pada header */
+    margin-bottom: 20px; /* Memberikan jarak di bawah header */
+}
+
+header .logo h2 {
+    margin: 0; /* Menghilangkan margin default pada h2 */
+    font-size: 24px; /* Ukuran font untuk logo */
+}
+
+header nav button {
+    background-color: #ff4747; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghapus border tombol */
+    padding: 10px 20px; /* Padding tombol */
+    cursor: pointer; /* Menampilkan pointer saat hover */
+    border-radius: 5px; /* Sudut melengkung pada tombol */
+}
+
+header nav button:hover {
+    background-color: #ff1a1a; /* Mengubah warna latar belakang saat hover */
+}
+
+/* Main Content */
+main {
+    background-color: white; /* Warna latar belakang konten utama */
+    padding: 20px; /* Padding di dalam konten utama */
+    border-radius: 8px; /* Sudut melengkung pada konten utama */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Memberikan bayangan halus pada konten utama */
+}
+
+.welcome {
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    margin-bottom: 40px; /* Memberikan jarak di bawah bagian welcome */
+}
+
+.welcome h1 {
+    font-size: 32px; /* Ukuran font untuk judul */
+    color: #333; /* Warna teks judul */
+}
+
+.welcome p {
+    font-size: 18px; /* Ukuran font untuk paragraf */
+    color: #555; /* Warna teks paragraf */
+}
+
+/* Form Section */
+.form-section {
+    display: flex; /* Menggunakan flexbox untuk tata letak form */
+    justify-content: space-between; /* Menyebarkan form-container */
+    gap: 20px; /* Memberikan jarak antar form-container */
+    margin-bottom: 40px; /* Memberikan jarak di bawah form */
+}
+
+.form-container {
+    flex: 1; /* Membuat form-container fleksibel */
+    background-color: #fafafa; /* Warna latar belakang form */
+    padding: 20px; /* Padding di dalam form */
+    border-radius: 8px; /* Sudut melengkung pada form */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus pada form */
+}
+
+.form-container h3 {
+    font-size: 24px; /* Ukuran font untuk judul form */
+    margin-bottom: 20px; /* Memberikan jarak di bawah judul */
+    color: #333; /* Warna teks judul */
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+    width: 100%; /* Lebar elemen form 100% */
+    padding: 12px; /* Padding di dalam elemen form */
+    margin-bottom: 15px; /* Memberikan jarak bawah antar elemen */
+    border: 1px solid #ddd; /* Border tipis untuk elemen form */
+    border-radius: 5px; /* Sudut melengkung pada elemen form */
+    font-size: 16px; /* Ukuran font elemen form */
+}
+
+/* Styling untuk Category Select yang lebih menarik */
+.form-container select {
+    background-color: #fff; /* Warna latar belakang dropdown */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"%3E%3Cpath fill="currentColor" d="M5 7l5 5 5-5z"%3E%3C/path%3E%3C/svg%3E');  /* Icon panah dropdown */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar latar */
+    background-position: right 10px center; /* Posisi icon panah */
+    appearance: none;  /* Menghilangkan gaya default browser */
+    cursor: pointer; /* Menampilkan pointer saat hover */
+}
+
+/* Hover dan Focus Effect pada select */
+.form-container select:hover, .form-container select:focus {
+    border-color: #4caf50;  /* Mengubah border menjadi hijau saat focus atau hover */
+}
+
+/* Styling untuk tombol */
+.form-container button {
+    background-color: #4caf50; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghapus border tombol */
+    padding: 12px 20px; /* Padding tombol */
+    font-size: 16px; /* Ukuran font tombol */
+    cursor: pointer; /* Menampilkan pointer saat hover */
+    border-radius: 5px; /* Sudut melengkung pada tombol */
+}
+
+.form-container button:hover {
+    background-color: #45a049; /* Mengubah warna latar belakang tombol saat hover */
+}
+
+/* Overview Section */
+.overview {
+    display: flex; /* Menggunakan flexbox untuk tata letak overview */
+    gap: 20px; /* Memberikan jarak antar overview-item */
+    margin-bottom: 40px; /* Memberikan jarak di bawah overview */
+}
+
+.overview-item {
+    flex: 1; /* Membuat overview-item fleksibel */
+    background-color: #f0f4f8; /* Warna latar belakang overview-item */
+    padding: 20px; /* Padding di dalam overview-item */
+    border-radius: 8px; /* Sudut melengkung pada overview-item */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan halus pada overview-item */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+}
+
+.overview-item h3 {
+    font-size: 20px; /* Ukuran font untuk judul overview-item */
+    margin-bottom: 10px; /* Memberikan jarak di bawah judul */
+    color: #555; /* Warna teks judul */
+}
+
+.overview-item p {
+    font-size: 24px; /* Ukuran font untuk nilai overview-item */
+    color: #333; /* Warna teks nilai */
+    font-weight: bold; /* Menebalkan teks nilai */
+}
+
+/* Tabel Daftar Bisnis */
+.table-section {
+    margin-top: 40px; /* Memberikan jarak atas pada tabel */
+    padding: 0 15px; /* Memberikan padding pada sisi kiri dan kanan tabel */
+}
+
+.table-section h3 {
+    font-size: 24px; /* Ukuran font besar */
+    color: #333; /* Warna teks gelap */
+    margin-bottom: 20px; /* Jarak bawah */
+    font-weight: bold; /* Teks tebal */
+    text-transform: uppercase; /* Membuat teks kapital */
+    letter-spacing: 2px; /* Memberikan jarak antar huruf */
+    padding-left: 15px; /* Memberikan padding di kiri */
+    border-left: 5px solid #3498db; /* Garis samping biru untuk kesan modern */
+}
+
+/* Styling untuk tabel Daftar Bisnis */
+#businessTable {
+    width: 100%; /* Lebar tabel 100% */
+    border-collapse: collapse; /* Menggabungkan border tabel */
+    margin-bottom: 30px; /* Memberikan jarak di bawah tabel */
+    background-color: #fff; /* Warna latar belakang tabel */
+    border-radius: 12px; /* Sudut melengkung lebih halus pada tabel */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus dan lebih besar */
+    overflow: hidden; /* Menghindari konten keluar dari border melengkung */
+}
+
+#businessTable th {
+    padding: 16px 20px; /* Padding lebih besar pada header */
+    text-align: left; /* Menyelaraskan teks ke kiri */
+    background-color: #2ecc71; /* Warna latar belakang biru muda */
+    color: #fff; /* Warna teks putih */
+    font-size: 16px; /* Ukuran font lebih besar untuk header */
+    text-transform: uppercase; /* Membuat teks header menjadi kapital */
+}
+
+#businessTable td {
+    padding: 14px 20px; /* Padding lebih besar di dalam sel */
+    text-align: left; /* Menyelaraskan teks ke kiri */
+    border-bottom: 1px solid #e0e0e0; /* Border bawah lebih halus */
+    font-size: 12px; /* Ukuran font lebih kecil di dalam sel */
+    color: #555; /* Warna teks lebih gelap */
+    transition: background-color 0.3s ease; /* Transisi halus pada perubahan warna latar belakang */
+}
+
+#businessTable tbody tr:hover {
+    background-color: #f7f7f7; /* Mengubah warna latar belakang saat hover pada baris tabel */
+    transform: scale(1.02); /* Sedikit memperbesar ukuran baris saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bayangan halus pada hover */
+}
+
+/* Menambahkan efek pada tabel jika data kosong */
+table.empty tbody {
+    display: block;
+    height: 150px;
+    overflow-y: auto;
+}
+
+table.empty tbody:empty {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+}
+
+/* Section kategori */
+.categori-section {
+    margin-top: 40px; /* Memberikan jarak atas pada tabel */
+    padding: 0 15px; /* Memberikan padding pada sisi kiri dan kanan tabel */
+}
+
+.categori-section h3 {
+    font-size: 24px; /* Ukuran font besar */
+    color: #333; /* Warna teks gelap */
+    margin-bottom: 20px; /* Jarak bawah */
+    font-weight: bold; /* Teks tebal */
+    text-transform: uppercase; /* Membuat teks kapital */
+    letter-spacing: 2px; /* Memberikan jarak antar huruf */
+    padding-left: 15px; /* Memberikan padding di kiri */
+    border-left: 5px solid #2ecc71; /* Garis samping hijau untuk kesan modern */
+}
+
+/* Styling untuk tabel Daftar Kategori */
+#categoryTable {
+    width: 100%; /* Lebar tabel 100% */
+    border-collapse: collapse; /* Menggabungkan border tabel */
+    margin-bottom: 30px; /* Memberikan jarak di bawah tabel */
+    background-color: #fff; /* Warna latar belakang tabel */
+    border-radius: 12px; /* Sudut melengkung lebih halus pada tabel */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* Bayangan lebih halus dan lebih besar */
+    overflow: hidden; /* Menghindari konten keluar dari border melengkung */
+}
+
+/* Header tabel */
+#categoryTable th {
+    padding: 16px 20px; /* Padding lebih besar pada header */
+    text-align: left; /* Menyelaraskan teks ke kiri secara default */
+    background-color: #2ecc71; /* Warna latar belakang hijau muda */
+    color: #fff; /* Warna teks putih */
+    font-size: 16px; /* Ukuran font lebih besar untuk header */
+    text-transform: uppercase; /* Membuat teks header menjadi kapital */
+}
+
+/* Header kolom aksi */
+#categoryTable th:nth-child(2) {
+    text-align: right; /* Menyelaraskan teks header ke kanan */
+    padding-right: 140px; /* Memberikan jarak di sisi kanan */
+}
+
+/* Sel tabel */
+#categoryTable td {
+    padding: 14px 20px; /* Padding lebih besar di dalam sel */
+    text-align: left; /* Menyelaraskan teks ke kiri */
+    border-bottom: 1px solid #e0e0e0; /* Border bawah lebih halus */
+    font-size: 12px; /* Ukuran font lebih kecil di dalam sel */
+    color: #555; /* Warna teks lebih gelap */
+    transition: background-color 0.3s ease; /* Transisi halus pada perubahan warna latar belakang */
+}
+
+/* Kolom Aksi */
+#categoryTable td:last-child {
+    text-align: right; /* Menyelaraskan konten ke kanan */
+    padding-right: 20px; /* Memberikan jarak di sisi kanan */
+}
+
+/* Tombol aksi */
+#categoryTable td button {
+    margin-left: 5px; /* Kurangi jarak antar tombol */
+}
+
+/* Hover pada baris tabel */
+#categoryTable tbody tr:hover {
+    background-color: #f7f7f7; /* Mengubah warna latar belakang saat hover pada baris tabel */
+    transform: scale(1.02); /* Sedikit memperbesar ukuran baris saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bayangan halus pada hover */
+}
+
+/* CSS untuk tombol Edit dan Hapus */
+
+button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Tombol Edit */
+button.editBtn {
+    background-color: #4CAF50; /* Hijau */
+    color: white;
+}
+
+button.editBtn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Efek hover: sedikit naik */
+}
+
+button.editBtn:active {
+    background-color: #3e8e41;
+    transform: translateY(2px); /* Efek saat tombol ditekan */
+}
+
+/* Tombol Hapus */
+button.deleteBtn {
+    background-color: #f44336; /* Merah */
+    color: white;
+}
+
+button.deleteBtn:hover {
+    background-color: #e53935;
+    transform: translateY(-2px); /* Efek hover: sedikit naik */
+}
+
+button.deleteBtn:active {
+    background-color: #c62828;
+    transform: translateY(2px); /* Efek saat tombol ditekan */
+}
+
+/* Styling untuk tombol di dalam tabel */
+table button {
+    margin: 0 5px;
+}
+
+/* Tombol Edit */
+button.editCategoryBtn {
+    background-color: #4CAF50; /* Hijau */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.editCategoryBtn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* Efek hover: sedikit naik */
+}
+
+button.editCategoryBtn:active {
+    background-color: #3e8e41;
+    transform: translateY(2px); /* Efek saat tombol ditekan */
+}
+
+/* Tombol Hapus */
+button.deleteCategoryBtn {
+    background-color: #f44336; /* Merah */
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.deleteCategoryBtn:hover {
+    background-color: #e53935;
+    transform: translateY(-2px); /* Efek hover: sedikit naik */
+}
+
+button.deleteCategoryBtn:active {
+    background-color: #c62828;
+    transform: translateY(2px); /* Efek saat tombol ditekan */
+}
+
+/* Styling untuk tombol di dalam tabel */
+table button {
+    margin: 0 5px;
+}
+
+
+/* Styling untuk pagination */
+#pagination {
+    display: flex;
+    justify-content: center; /* Menempatkan pagination di tengah */
+    margin-top: 20px; /* Memberikan jarak atas untuk pagination */
+}
+
+#pagination button {
+    background-color: #45a049; /* Warna tombol pagination biru */
+    color: #fff; /* Warna teks putih */
+    border: none; /* Menghapus border default */
+    padding: 10px 15px; /* Padding tombol */
+    margin: 0 5px; /* Jarak antar tombol */
+    border-radius: 8px; /* Sudut tombol melengkung */
+    cursor: pointer; /* Menambahkan pointer saat hover */
+    transition: background-color 0.3s ease; /* Transisi halus untuk hover */
+}
+
+#pagination button:hover {
+    background-color: #45a049; /* Warna tombol lebih gelap saat hover */
+}
+
+/* Footer */
+footer {
+    background-color: #333;  /* Sama dengan warna background header */
+    color: white;  /* Warna teks putih */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    padding: 15px 0;  /* Padding vertikal untuk memberi jarak yang cukup */
+    margin-top: 40px;  /* Jarak antara konten utama dan footer */
+    border-radius: 10px;  /* Memberikan sudut melengkung pada footer */
+}
+
+
+footer p {
+    font-size: 14px; /* Ukuran font untuk teks footer */
+    margin: 0;  /* Menghapus margin default pada p */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .form-section {
+        flex-direction: column; /* Mengubah form-section menjadi kolom pada layar kecil */
+        align-items: center; /* Menyelaraskan elemen form-container ke tengah */
+    }
+
+    .form-container {
+        width: 100%; /* Membuat form-container lebar 100% pada layar kecil */
+        margin-bottom: 20px; /* Memberikan jarak bawah pada form-container */
+    }
+
+    .overview {
+        flex-direction: column; /* Mengubah overview menjadi kolom pada layar kecil */
+    }
+}

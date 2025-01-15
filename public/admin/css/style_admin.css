@@ -1,0 +1,121 @@
+/* public/admin/css/style.css */
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f4f4f4;
+  margin: 0;
+  color: #333;
+}
+
+/* SweetAlert Button Styles */
+.swal-button {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white !important;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.swal-button:hover {
+  background-color: #45a049 !important;
+  color: #fff !important;
+}
+
+/* Login Container */
+.login-container {
+  position: fixed;
+  top: 30%;
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8em;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  color: #555;
+  text-align: left;
+}
+
+/* Input Fields */
+input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.3);
+}
+
+/* Buttons */
+button {
+  width: 50%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
