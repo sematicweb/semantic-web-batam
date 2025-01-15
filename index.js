@@ -22,10 +22,10 @@ app.use(session({
 
 // Konfigurasi koneksi ke database
 const dbConfig = {
-    host: 'bgo0yo8jgvztz1n8huu0-mysql.services.clever-cloud.com',
-    user: 'ujauspvi7q8ojx2m',
-    password: 'RlZ41vpei0SUeLhuhOlO',
-    database: 'bgo0yo8jgvztz1n8huu0', // Ganti dengan nama database Anda
+    host: 'bq8dmynnlpxzyd2x2mcr-mysql.services.clever-cloud.com',
+    user: 'ujskzwxrxov3nqln',
+    password: '2N87KBtfPGtMOljVx7wH',
+    database: 'bq8dmynnlpxzyd2x2mcr', // Ganti dengan nama database Anda
 };
 
 // Fungsi untuk membuat koneksi
