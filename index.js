@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.use('/admin', express.static('admin'));
 app.use('/uploads', express.static('uploads'));
 app.use(session({
-    secret: 'your_secret_key', // Ganti dengan secret key Anda
+    secret: 'your_secret_key', 
     resave: false,
     saveUninitialized: true,
 }));
@@ -25,7 +25,7 @@ const dbConfig = {
     host: 'bq8dmynnlpxzyd2x2mcr-mysql.services.clever-cloud.com',
     user: 'ujskzwxrxov3nqln',
     password: '2N87KBtfPGtMOljVx7wH',
-    database: 'bq8dmynnlpxzyd2x2mcr', // Ganti dengan nama database Anda
+    database: 'bq8dmynnlpxzyd2x2mcr', 
 };
 
 // Fungsi untuk membuat koneksi
@@ -70,13 +70,6 @@ setInterval(() => {
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
-
-// Menjalankan server
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Server berjalan di port ${port}`);
-});
-
 
 // Fungsi: API untuk login admin
 app.post('/admin/login', (req, res) => {
